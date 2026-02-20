@@ -148,14 +148,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:5173",
-    "https://frontend-jpkwekzou-justin-busari007s-projects.vercel.app",
 ]
 
-
+# Add production frontend URL if provided
 FRONTEND_URL = os.environ.get('FRONTEND_URL', '')
 if FRONTEND_URL:
     CORS_ALLOWED_ORIGINS.append(FRONTEND_URL)
-
 
 if DEBUG:
     CORS_ALLOW_ALL_ORIGINS = True

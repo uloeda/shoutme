@@ -2,9 +2,13 @@
 venv/
 __pycache__/
 *.pyc
+.env
+.env.local
 
 # Django
 db.sqlite3
+staticfiles/
 
 # Node
 node_modules/
+dist/
